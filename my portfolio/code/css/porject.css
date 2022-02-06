@@ -1,0 +1,284 @@
+/* start Variables */
+:root {
+    --min-color: #0099e5;
+    --main-color-alt: #007cc0;
+    --body-font: 'Varela Round', sans-serif;
+    --whit-color: #adadad;
+    --whit-color-alt: #f6f6f6;
+    ---color-alt: #555555;
+    --black-color: rgb(5, 5, 5);
+}
+/* End Variables */
+/* start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: var(--body-font);
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.container .title {
+    color: var(--main-color-alt);
+}
+@media (max-width: 768px) {
+    .container .title {
+        font-size: 20px;
+    }
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* start up */
+.up {
+    background-color: var(--black-color);
+}
+.up .container .boxs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.up .container .boxs .box-logo img {
+    width: 50px;
+}
+.up .container .boxs a {
+    color: var(--main-color-alt);
+    padding: 10px;
+    transition: .5s;
+}
+.up .container .boxs a:hover {
+    color: var(---color-alt);
+}
+.up .container .boxs a span {
+    font-size: 12px;
+    margin-right: 5px;
+} 
+@media (max-width: 768px) {
+    .up .container .boxs .box-logo img {
+        width: 40px;
+    }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #131313;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0076b53f;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color-alt);
+}
+
+/* End up */
+/* start porject main */
+.porject-main {
+    background-color: var(--black-color);
+    position: relative;
+    padding-bottom: 50px;
+}
+.porject-main .container {
+    animation: left-and-rihgt 1.5s cubic-bezier(0.74, 0.09, 0.07, 0.93) 1 alternate forwards;
+    position: relative;
+}
+.porject-main .container .title-porject {
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.porject-main .container .title-porject h1 {
+    color: var(--main-color-alt);
+}
+.porject-main .container .title-porject .line {
+    width: 150px;
+    height: 5px;
+    background-color: var(--main-color-alt);
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.porject-main .container .boxs-porject-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.porject-main .container .boxs-porject-main .box-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.porject-main .container .boxs-porject-main .box-text h4 {
+    color: var(---color-alt);
+    margin: 5px;
+}
+.porject-main .container .boxs-porject-main .box-text span {
+    color: var(--whit-color);
+    margin-left: 100px;
+    padding: 10px;
+}
+.porject-main .container .boxs-porject-main .box-text .button a button {
+    padding: 15px 30px;
+    margin-top: 50px;
+    cursor: pointer;
+    background-color: var(--main-color-alt);
+    border: none;
+    border-radius: 6px;
+    color: var(--whit-color-alt);
+    margin-bottom: 60px;
+    border: 1px solid var(--main-color-alt);
+    transition: .5s;
+    margin-right: 10px;
+}
+.porject-main .container .boxs-porject-main .box-text .button a button:hover {
+    background-color: var(--black-color);
+    color: var(--main-color-alt);
+
+}
+.porject-main .container .box-text .box-img-main-alt img {
+    width: 100px;
+    border: 1px solid var(--black-color);
+    border-radius: 3PX;
+    height: 68px;
+    cursor: pointer;
+    transition: .5s;
+    max-width: 100%;
+}
+.porject-main .container .box-text .box-img-main-alt img:hover {
+    width: 110px;
+    height: 78px;
+    max-width: 100%;
+}
+.popup-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+.popup-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 1px solid var(--black-color);
+    border-radius: 6px;
+    padding: 20px;
+    z-index: 1001;
+    text-align: right;
+}
+.popup-box i {
+    color: var(--main-color-alt);
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-top: -20px;
+    transition: .5s;
+    cursor: pointer;
+}
+.popup-box i:hover {
+   color: var(--whit-color) ;
+}
+.popup-box img {
+    max-width: 100%;
+}
+/* Small */
+@media (max-width: 768px) {
+    .porject-main .container .boxs-porject-main {  
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: space-between;
+    }
+    .porject-main .container .boxs-porject-main .box-text h4 {
+        margin: 2px;
+        font-size: 10px;
+    }
+    .porject-main .container .boxs-porject-main .box-text span {
+        margin-left: 50px;
+        padding: 5px;
+        font-size: 8px;
+    }
+    .porject-main .container .boxs-porject-main .box-text .button a button {
+        padding: 7.5px 15px;
+        margin-bottom: 60px;;
+        margin-right: 0px;
+        font-size: 8px;
+    }
+    .porject-main .container .box-text .box-img-main-alt img {
+        width: 50px;
+        height: 34px;
+    }
+    .porject-main .container .box-text .box-img-main-alt img:hover {
+        width: 60px;
+        height: 44px;
+        max-width: 100%;
+    }
+    .porject-main .container .box-img-main {
+        width: 100px;
+        max-width: 100%;
+    }
+    .popup-box i {
+        font-size: 15px;
+    }
+}
+/* End porject main */
+/* start animation */
+@keyframes left-and-rihgt {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0px;
+    }
+}
+/* End animation */
